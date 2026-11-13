@@ -64,12 +64,24 @@ function messageId(): string {
 
 type MailKind = "ack" | "internal" | "news_confirmation" | "test";
 
-type SmtpErrorLike = { code?: unknown; responseCode?: unknown; command?: unknown; name?: unknown };
+type SmtpErrorLike = {
+  code?: unknown;
+  responseCode?: unknown;
+  command?: unknown;
+  name?: unknown;
+  message?: unknown;
+  reason?: unknown;
+  cause?: { code?: unknown; message?: unknown };
+};
+
+/** Quita cualquier dirección de correo y acota la longitud. */
+const redact = (v: unknown, max = 240) =>
+  typeof v === "string" ? v.replace(/[^\s<>"'(),;:]+@[^\s<>"'(),;:]+/g, "[correo]").slice(0, max) : undefined;
 
 /**
- * Registra el fallo de un envío sin direcciones, nombres ni contenido: solo el tipo
- * de correo, el idioma y los códigos técnicos. El mensaje de error de nodemailer no
- * se registra porque puede incluir direcciones de destinatarios.
+ * Registra el fallo de un envío sin direcciones, nombres ni contenido: tipo de correo,
+ * idioma, códigos técnicos y el mensaje de error con cualquier dirección sustituida
+ * por [correo].
  */
 function logMailFailure(kind: MailKind, locale: Locale | undefined, error: unknown) {
   const e = (error ?? {}) as SmtpErrorLike;
@@ -82,6 +94,11 @@ function logMailFailure(kind: MailKind, locale: Locale | undefined, error: unkno
       code: typeof e.code === "string" ? e.code : undefined,
       responseCode: typeof e.responseCode === "number" ? e.responseCode : undefined,
       command: typeof e.command === "string" ? e.command : undefined,
+      // En fallos de conexión (CONN) el mensaje dice la causa exacta: certificado, puerto,
+      // conexión rechazada… Se registra sin direcciones de correo.
+      detail: redact(e.message),
+      tls: redact(e.reason) ?? redact(e.cause?.message),
+      cause: typeof e.cause?.code === "string" ? e.cause.code : undefined,
     }),
   );
 }
