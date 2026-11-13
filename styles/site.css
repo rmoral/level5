@@ -277,13 +277,13 @@ section[id] {
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.08em;
-  color: var(--dark-ink-2);
+  color: var(--dark-ink);
 }
 
 .lang-switch li + li::before {
   content: "·";
   padding: 0 6px;
-  color: var(--dark-ink-2);
+  color: var(--dark-ink);
 }
 
 .lang-switch a,
@@ -297,7 +297,7 @@ section[id] {
 }
 
 .lang-switch a {
-  color: var(--dark-ink-2);
+  color: var(--dark-ink);
   text-decoration: none;
 }
 
@@ -308,10 +308,12 @@ section[id] {
 
 .lang-switch [aria-current="true"] {
   color: var(--dark-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 .lang-switch .lang-off {
-  opacity: 0.6;
   cursor: default;
 }
 
@@ -448,6 +450,10 @@ section[id] {
   background: var(--veil);
 }
 
+.hero-media::after {
+  background: var(--veil-hero);
+}
+
 .media-placeholder {
   position: absolute;
   inset: 0;
@@ -471,7 +477,7 @@ section[id] {
   line-height: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--dark-ink-2);
+  color: var(--dark-ink);
 }
 
 .hero h1 {
@@ -486,7 +492,7 @@ section[id] {
   max-width: 640px;
   font-size: 20px;
   line-height: 30px;
-  color: var(--dark-ink-2);
+  color: var(--dark-ink);
 }
 
 .hero-actions {
