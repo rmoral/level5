@@ -2,9 +2,9 @@ import type { Dictionary } from "./schema";
 
 /**
  * Castellano: texto de origen. Portado literalmente de reference/Main.dc.html (y de
- * Movil.dc.html para las tarjetas móviles de verticales), salvo los titulares de
- * sección y el paso de Valira Valley, revisados por los socios el 13-11-2026
- * (docs/DECISIONS.md, 19).
+ * Movil.dc.html para las tarjetas móviles de verticales), salvo los titulares y
+ * entradillas de sección y el paso de Valira Valley, revisados por los socios el 13-11-2026
+ * (docs/DECISIONS.md, 19 y 20).
  * Las cadenas marcadas con [no-canvas] no están en el canvas: son etiquetas de
  * accesibilidad o metadatos necesarios; se revisan con los socios (docs/DECISIONS.md).
  */
@@ -12,7 +12,7 @@ export const es = {
   meta: {
     title: "Level Five", // [no-canvas]
     description:
-      "Level Five es un grupo operativo andorrano. Consultoría e inteligencia artificial, aceleración de startups, instalación en el país, formación, software y comunidad: seis marcas y un solo equipo detrás.",
+      "Level Five es un grupo empresarial andorrano que integra consultoría estratégica e inteligencia artificial, aceleración de startups, implantación en Andorra, formación, software y comunidad: seis marcas especializadas y un único equipo.",
   },
   a11y: {
     skipLink: "Saltar al contenido", // [no-canvas]
@@ -35,7 +35,7 @@ export const es = {
   hero: {
     kicker: "Level Five · Principat d'Andorra · Desde 2026",
     title: "Un único grupo para cada etapa del crecimiento de una empresa.",
-    lead: "Level Five es un grupo operativo andorrano. Consultoría e inteligencia artificial, aceleración de startups, instalación en el país, formación, software y comunidad: seis marcas y un solo equipo detrás.",
+    lead: "Level Five es un grupo empresarial andorrano que integra consultoría estratégica e inteligencia artificial, aceleración de startups, implantación en Andorra, formación, software y comunidad: seis marcas especializadas y un único equipo.",
     ctaPrimary: "Cuéntanos tu caso",
     ctaSecondary: "Ver las seis verticales ↓",
     photoAlt: "",
@@ -50,8 +50,8 @@ export const es = {
     eyebrow: "01 · El grupo",
     title: "Estrategia, tecnología, talento y capital. En ese orden y con un único interlocutor.",
     paragraphs: [
-      "Una empresa que quiere crecer acaba hablando con una consultora, una academia, un proveedor de software, un inversor y una gestoría que no se conocen entre sí. Level Five nace para que esa conversación sea una sola.",
-      "Somos una única sociedad andorrana que opera seis marcas especializadas. Cada una tiene su oferta y su web; todas comparten método, estándar y los mismos socios al otro lado de la mesa.",
+      "Una empresa en crecimiento suele trabajar a la vez con una consultora, un centro de formación, un proveedor de software, un inversor y una gestoría que no se coordinan entre sí. Level Five reúne todas esas funciones en un único interlocutor.",
+      "Somos una sociedad andorrana que opera seis marcas especializadas. Cada una cuenta con su propia oferta y su propia web; todas comparten método, estándares de calidad y los mismos socios.",
     ],
     principles: [
       {
@@ -74,7 +74,7 @@ export const es = {
   verticals: {
     eyebrow: "02 · Verticales",
     title: "Seis especialidades que se complementan.",
-    lead: "Cada vertical resuelve un momento distinto de la vida de una empresa y le abre la puerta a la siguiente. Entres por donde entres, tienes al resto del grupo detrás.",
+    lead: "Cada vertical atiende una etapa distinta de la vida de una empresa y da paso a la siguiente. Sea cual sea tu punto de entrada, cuentas con el respaldo de todo el grupo.",
     goTo: "Ir a {domain} ↗",
     comingSoon: "Próximamente",
     items: {
@@ -186,7 +186,7 @@ export const es = {
   partners: {
     eyebrow: "04 · Quién está detrás",
     title: "Dos sociedades andorranas al frente del grupo.",
-    lead: "Level Five lo forman BrightTech y Saikaris. Las dos trabajan como un solo equipo en todas las verticales, con una red de mentores y colaboradores que entra cuando el proyecto lo pide.",
+    lead: "Level Five está formado por BrightTech y Saikaris, que trabajan como un único equipo en todas las verticales y se apoyan en una red de mentores y colaboradores que se incorpora según las necesidades de cada proyecto.",
     brighttech: {
       label: "Socio · Negocio digital, software e IA",
       body: "Veinticinco años creando y dirigiendo negocios digitales. Aporta al grupo la estrategia, el desarrollo de software y la implantación de inteligencia artificial.",
