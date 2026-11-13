@@ -13,8 +13,8 @@ export const images: {
   andorra: Photo;
   verticals: Record<VerticalId, Photo>;
 } = {
-  hero: null,
-  heroMobile: null,
+  hero: { src: "/img/hero.jpg", width: 2400, height: 1400 },
+  heroMobile: { src: "/img/hero-mobile.jpg", width: 1280, height: 1600 },
   andorra: null,
   verticals: {
     intelligence: null,

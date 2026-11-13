@@ -6,7 +6,7 @@ Tratamiento común: saturación al 85 % aplicada al archivo. El velo `#0B1A33` a
 
 | Archivo | Hueco | Ficha | Autor | Licencia (comprobada en la ficha) | Ubicación (según la ficha) | Tamaño | Descarga |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `hero.jpg` + `hero-mobile.jpg` (_archivo pendiente de descarga_) | Hero | [unsplash.com/photos/rTGY77LF8BI](https://unsplash.com/es/fotos/montana-durante-el-dia-rTGY77LF8BI) ("montaña durante el día", publicada el 18-01-2019, Apple iPhone XS) | Kira Laktionov ([@kiralaktionov](https://unsplash.com/@kiralaktionov)) | Uso gratuito bajo la Licencia Unsplash (no Unsplash+). Comprobado en la ficha por Ruben el 13-11-2026 (captura de la ficha) | Encamp, Andorra (según la ficha) | | |
+| `hero.jpg` (2400×1400) + `hero-mobile.jpg` (1280×1600, 4:5) | Hero | [unsplash.com/photos/rTGY77LF8BI](https://unsplash.com/es/fotos/montana-durante-el-dia-rTGY77LF8BI) ("montaña durante el día", publicada el 18-01-2019, Apple iPhone XS) | Kira Laktionov ([@kiralaktionov](https://unsplash.com/@kiralaktionov)) | Uso gratuito bajo la Licencia Unsplash (no Unsplash+). Comprobado en la ficha por Ruben el 13-11-2026 (captura de la ficha) | Encamp, Andorra (según la ficha) | Original 2400×1600; recorte centrado y saturación al 85 % (`scripts/process-photo.mjs`) | 13-11-2026 (archivo descargado de la ficha y aportado por Ruben) |
 | _pendiente_ | Andorra (`andorra.jpg`) | | | | | | |
 | _pendiente_ | Fifth Intelligence (`v-intelligence.jpg`) | | | | | | |
 | _pendiente_ | Fifth Foundry (`v-foundry.jpg`) | | | | | | |
