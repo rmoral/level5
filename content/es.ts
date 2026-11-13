@@ -1,8 +1,10 @@
 import type { Dictionary } from "./schema";
 
 /**
- * Castellano: texto de origen. Portado literalmente de reference/Main.dc.html
- * (y de Movil.dc.html para las tarjetas móviles de verticales).
+ * Castellano: texto de origen. Portado literalmente de reference/Main.dc.html (y de
+ * Movil.dc.html para las tarjetas móviles de verticales), salvo los titulares de
+ * sección y el paso de Valira Valley, revisados por los socios el 13-11-2026
+ * (docs/DECISIONS.md, 19).
  * Las cadenas marcadas con [no-canvas] no están en el canvas: son etiquetas de
  * accesibilidad o metadatos necesarios; se revisan con los socios (docs/DECISIONS.md).
  */
@@ -32,7 +34,7 @@ export const es = {
   },
   hero: {
     kicker: "Level Five · Principat d'Andorra · Desde 2026",
-    title: "Lo que una empresa necesita para crecer, bajo un mismo techo.",
+    title: "Un único grupo para cada etapa del crecimiento de una empresa.",
     lead: "Level Five es un grupo operativo andorrano. Consultoría e inteligencia artificial, aceleración de startups, instalación en el país, formación, software y comunidad: seis marcas y un solo equipo detrás.",
     ctaPrimary: "Cuéntanos tu caso",
     ctaSecondary: "Ver las seis verticales ↓",
@@ -46,7 +48,7 @@ export const es = {
   ],
   group: {
     eyebrow: "01 · El grupo",
-    title: "Criterio, herramientas, personas y capital. En ese orden, y con los mismos interlocutores.",
+    title: "Estrategia, tecnología, talento y capital. En ese orden y con un único interlocutor.",
     paragraphs: [
       "Una empresa que quiere crecer acaba hablando con una consultora, una academia, un proveedor de software, un inversor y una gestoría que no se conocen entre sí. Level Five nace para que esa conversación sea una sola.",
       "Somos una única sociedad andorrana que opera seis marcas especializadas. Cada una tiene su oferta y su web; todas comparten método, estándar y los mismos socios al otro lado de la mesa.",
@@ -71,7 +73,7 @@ export const es = {
   },
   verticals: {
     eyebrow: "02 · Verticales",
-    title: "Un círculo, no un catálogo.",
+    title: "Seis especialidades que se complementan.",
     lead: "Cada vertical resuelve un momento distinto de la vida de una empresa y le abre la puerta a la siguiente. Entres por donde entres, tienes al resto del grupo detrás.",
     goTo: "Ir a {domain} ↗",
     comingSoon: "Próximamente",
@@ -156,7 +158,7 @@ export const es = {
           "Entrar en el Club es gratis; la membresía incluye todas las Club Nights",
         ],
         who: "Para empresarios y directivos residentes, y para quien piensa en serlo.",
-        step: "NOS CONOCEMOS",
+        step: "CONECTAMOS",
         cardLine: "Pódcast, medio y Valira Club.",
         photoAlt: "Dos micrófonos de estudio en primer plano.",
       },
@@ -164,7 +166,7 @@ export const es = {
   },
   andorra: {
     eyebrow: "03 · Por qué Andorra",
-    title: "Un país del tamaño justo para probar rápido y crecer hacia fuera.",
+    title: "Un mercado a la escala adecuada para validar con rapidez y proyectarse a Europa.",
     reasons: [
       {
         title: "Todo queda cerca",
@@ -183,7 +185,7 @@ export const es = {
   },
   partners: {
     eyebrow: "04 · Quién está detrás",
-    title: "Dos sociedades andorranas, una mesa.",
+    title: "Dos sociedades andorranas al frente del grupo.",
     lead: "Level Five lo forman BrightTech y Saikaris. Las dos trabajan como un solo equipo en todas las verticales, con una red de mentores y colaboradores que entra cuando el proyecto lo pide.",
     brighttech: {
       label: "Socio · Negocio digital, software e IA",
@@ -196,7 +198,7 @@ export const es = {
   },
   contact: {
     eyebrow: "05 · Contacto",
-    title: "Cuéntanos qué necesitas. Nosotros te decimos por dónde empezar.",
+    title: "Explícanos tu proyecto y te indicaremos por dónde empezar.",
     next: [
       "Respondemos en un día laborable.",
       "Te ponemos en contacto con la vertical adecuada, o con varias.",

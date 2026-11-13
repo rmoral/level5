@@ -8,7 +8,7 @@ Cambios de la 1.1: lanzamiento en cuatro idiomas con castellano por defecto (sec
 
 Cambios de la 1.2: los socios que se presentan son las dos sociedades, BrightTech y Saikaris, no personas (sección 4.7); Level 5, SL aún no está registrada (sección 4.10).
 
-Cambios de la 1.3: "Cómo encaja" se integra en "Verticales" para no repetir el catálogo de marcas (secciones 4.4 y 4.5).
+Cambios de la 1.3: "Cómo encaja" se integra en "Verticales" para no repetir el catálogo de marcas (secciones 4.4 y 4.5). Los titulares de sección del canvas se sustituyen por una versión revisada por los socios (`content/es.ts`; docs/DECISIONS.md, 19), con el mismo tuteo.
 
 ---
 
@@ -101,13 +101,13 @@ Las anclas son URL reales: al cargar `level5.ad/#verticales` la página se sitú
 
 Orden y contenido según el artboard `Main`. Ids de sección entre paréntesis.
 
-**4.1 Hero (`#inicio`).** Fondo de fotografía a sangre con velo `#0B1A33` al 55 %, cabecera transparente encima. Etiqueta en mono, titular *"Lo que una empresa necesita para crecer, bajo un mismo techo."*, entradilla, botón principal **"Cuéntanos tu caso"** (a `#contacto`) y enlace secundario "Ver las seis verticales ↓". Altura `100svh` con mínimo de 640 px.
+**4.1 Hero (`#inicio`).** Fondo de fotografía a sangre con velo `#0B1A33` al 55 %, cabecera transparente encima. Etiqueta en mono, titular *"Un único grupo para cada etapa del crecimiento de una empresa."*, entradilla, botón principal **"Cuéntanos tu caso"** (a `#contacto`) y enlace secundario "Ver las seis verticales ↓". Altura `100svh` con mínimo de 640 px.
 
 **4.2 Franja de credenciales.** Cuatro frases en mono separadas por reglas. Sin logotipos.
 
 **4.3 El grupo (`#grupo`).** Titular a la izquierda, dos párrafos a la derecha y tres principios en rejilla de reglas (A · B · C).
 
-**4.4 Verticales (`#verticales`).** La sección central, que integra la antigua 4.5 "Cómo encaja" (cambio de la versión 1.3). Titular "Un círculo, no un catálogo." y, bajo él, la entradilla de "Cómo encaja" ("Cada vertical resuelve un momento distinto de la vida de una empresa…"). Lista de las seis a la izquierda, **en el orden del círculo**: instalamos (Landing) → diagnosticamos (Intelligence) → formamos (Academy) → equipamos (Labs) → aceleramos (Foundry) → nos conocemos (Valira Valley), que cierra el círculo porque es la que relaciona a todas (decisión de los socios, 13 de noviembre de 2026); cada elemento lleva en mono el número y el paso ("01 · INSTALAMOS"), el nombre y la línea corta. Ficha a la derecha con: regla superior en el acento de la vertical, fotografía, nombre en la fuente de su logo, descriptor en mono, frase principal, tres líneas de oferta, "para quién" y botón **"Ir a [dominio] ↗"**. En escritorio la sección se fija y avanza con el scroll (sección 6.4); en móvil son seis tarjetas apiladas enlazadas a su web (artboard `Movil`), en el mismo orden y con el paso en la etiqueta mono ("01 · INSTALAMOS"). Las frases de cada paso del canvas no se muestran: su contenido ya está en la ficha de cada vertical.
+**4.4 Verticales (`#verticales`).** La sección central, que integra la antigua 4.5 "Cómo encaja" (cambio de la versión 1.3). Titular "Seis especialidades que se complementan." y, bajo él, la entradilla de "Cómo encaja" ("Cada vertical resuelve un momento distinto de la vida de una empresa…"). Lista de las seis a la izquierda, **en el orden del círculo**: instalamos (Landing) → diagnosticamos (Intelligence) → formamos (Academy) → equipamos (Labs) → aceleramos (Foundry) → conectamos (Valira Valley), que cierra el círculo porque es la que relaciona a todas (decisión de los socios, 13 de noviembre de 2026); cada elemento lleva en mono el número y el paso ("01 · INSTALAMOS"), el nombre y la línea corta. Ficha a la derecha con: regla superior en el acento de la vertical, fotografía, nombre en la fuente de su logo, descriptor en mono, frase principal, tres líneas de oferta, "para quién" y botón **"Ir a [dominio] ↗"**. En escritorio la sección se fija y avanza con el scroll (sección 6.4); en móvil son seis tarjetas apiladas enlazadas a su web (artboard `Movil`), en el mismo orden y con el paso en la etiqueta mono ("01 · INSTALAMOS"). Las frases de cada paso del canvas no se muestran: su contenido ya está en la ficha de cada vertical.
 
 Datos de las verticales (se leen de `content/verticals.ts`, nunca escritos en los componentes):
 
@@ -126,7 +126,7 @@ Todo enlace de salida a una vertical lleva `utm_source=level5&utm_medium=grupo&u
 
 **Regla de color.** El manual prohíbe dos acentos de marcas distintas en la misma composición. Por eso la ficha muestra **una sola vertical cada vez**, y el acento aparece solo en la regla superior de la ficha y en el punto de la lista. El pie nombra las seis sin color.
 
-**4.5 Cómo encaja.** Integrada en 4.4 desde la versión 1.3: las dos secciones seguidas repetían el catálogo de marcas. Se suprimen el ancla `#circulo`, el titular "Seis marcas. Entra por la que necesites hoy." y el enlace de la cabecera; las secciones siguientes se renumeran (03 · Por qué Andorra, 04 · Quién está detrás, 05 · Contacto).
+**4.5 Cómo encaja.** Integrada en 4.4 desde la versión 1.3: las dos secciones seguidas repetían el catálogo de marcas. Se suprimen el ancla `#circulo`, los titulares "Seis marcas. Entra por la que necesites hoy." y "Un círculo, no un catálogo." y el enlace de la cabecera; las secciones siguientes se renumeran (03 · Por qué Andorra, 04 · Quién está detrás, 05 · Contacto).
 
 **4.6 Por qué Andorra (`#andorra`).** Fotografía a sangre con velo, titular grande y tres razones. Sin cifras fiscales: cualquier dato numérico sobre fiscalidad o residencia queda fuera de esta página y vive en fifth-landing.com, revisado por la gestoría.
 
