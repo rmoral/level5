@@ -124,6 +124,25 @@ export const dictionarySchema = z.strictObject({
       again: text,
     }),
   }),
+  /** Correos al visitante, en su idioma (especificación §5.2). */
+  mail: z.strictObject({
+    ack: z.strictObject({
+      subject: text,
+      greeting: text.includes("{name}"),
+      received: text,
+      topic: text,
+      next: z.tuple([text, text]),
+      reply: text,
+      signature: text,
+    }),
+    news: z.strictObject({
+      subject: text,
+      body: text,
+      button: text,
+      fallback: text,
+      ignore: text,
+    }),
+  }),
   notFound: z.strictObject({
     title: text,
     back: text,
