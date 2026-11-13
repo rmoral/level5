@@ -234,6 +234,40 @@ export const es = {
       body: "Te hemos enviado un acuse a tu correo. Si marcaste las novedades, confírmalo desde el enlace que encontrarás en un segundo mensaje.",
       again: "Enviar otra consulta",
     },
+    // [no-canvas] Mensajes de error del formulario.
+    errors: {
+      required: "Este campo es obligatorio.",
+      email: "Revisa el correo: no parece una dirección válida.",
+      disposable: "Usa un correo permanente: no aceptamos direcciones temporales.",
+      tooLong: "La consulta no puede superar los 5.000 caracteres.",
+      consent: "Necesitamos tu consentimiento para responder a la consulta.",
+      tooFast: "Espera unos segundos y vuelve a enviar el formulario.",
+      rateLimited: "Hemos recibido varios envíos seguidos. Inténtalo de nuevo dentro de una hora.",
+      generic: "No hemos podido enviar el formulario. Inténtalo de nuevo en unos minutos.",
+      summary: "Revisa los campos marcados.",
+    },
+  },
+  // [no-canvas] Páginas de confirmación y baja de novedades.
+  subscription: {
+    confirm: {
+      title: "Confirma tu alta en las novedades",
+      body: "Pulsa el botón para confirmar que quieres recibir las novedades de Level Five por correo.",
+      button: "Confirmar mi alta",
+      confirmed: "Listo: tu alta está confirmada. Te escribiremos cuando haya algo que contar.",
+      alreadyConfirmed: "Tu alta ya estaba confirmada. No tienes que hacer nada más.",
+      unsubscribed: "Este alta se dio de baja. Si quieres volver a recibir las novedades, apúntate de nuevo desde la portada.",
+      notFound: "Este enlace no es válido o ha caducado. Puedes apuntarte de nuevo desde la portada.",
+    },
+    unsubscribe: {
+      title: "Darte de baja de las novedades",
+      body: "Pulsa el botón y dejarás de recibir las novedades de Level Five por correo.",
+      button: "Darme de baja",
+      unsubscribed: "Te has dado de baja. No volverás a recibir las novedades.",
+      alreadyUnsubscribed: "Ya estabas dado de baja. No recibirás más novedades.",
+      notFound: "Este enlace no es válido. Si sigues recibiendo correos, responde a cualquiera de ellos y te daremos de baja.",
+    },
+    error: "No hemos podido completar la operación. Inténtalo de nuevo en unos minutos.",
+    back: "Volver a la portada",
   },
   // [no-canvas] Correos: textos nuevos, a revisar por los socios. Las dos líneas de
   // "next" son las de "qué pasa después" del canvas.

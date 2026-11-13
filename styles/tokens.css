@@ -18,6 +18,10 @@
   --dark-ink: #faf9f6;
   --dark-ink-2: #aeb8cb;
 
+  /* Errores de formulario: no está en el manual; contraste ≥ 4,5:1 sobre papel y blanco */
+  --error: #9b1c1c;
+  --error-on-dark: #ffb4ab;
+
   /* Borde de campos (canvas) */
   --field-line: #aeb8cb;
 

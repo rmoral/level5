@@ -3,6 +3,7 @@ import { localePath, type Locale } from "@/content/locales";
 import { company, legalPaths, linkedinUrl } from "@/content/site";
 import { verticalHref, verticals } from "@/content/verticals";
 import { Lockup } from "./Symbol";
+import { NewsletterForm } from "./NewsletterForm";
 
 export function Footer({ t, locale }: { t: Dictionary; locale: Locale }) {
   const f = t.footer;
@@ -23,24 +24,7 @@ export function Footer({ t, locale }: { t: Dictionary; locale: Locale }) {
         <div className="footer-news">
           <Lockup size={36} />
           <p>{f.newsletter.body}</p>
-          <form className="news-form" method="post">
-            <input type="hidden" name="locale" value={locale} />
-            <label htmlFor="n-email" className="sr-only">
-              {f.newsletter.label}
-            </label>
-            <input
-              className="input"
-              id="n-email"
-              name="email"
-              type="email"
-              required
-              placeholder={f.newsletter.placeholder}
-              autoComplete="email"
-            />
-            <button type="submit" className="btn btn-light">
-              {f.newsletter.submit}
-            </button>
-          </form>
+          <NewsletterForm locale={locale} sourcePage={localePath(locale, "/")} t={f.newsletter} errors={t.contact.errors} />
           <p className="small">{f.newsletter.note}</p>
         </div>
         <nav aria-labelledby="pie-verticales">

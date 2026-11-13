@@ -10,6 +10,8 @@ import { Partners } from "@/components/Partners";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
+export const runtime = "nodejs";
+
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const locale = (await params).locale as Locale;
   const t = getDictionary(locale);

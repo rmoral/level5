@@ -17,6 +17,8 @@ del proyecto de Supabase de Fifth Landing**, separado de las tablas de la vertic
    Así sus tipos, tablas y funciones se crean en `level5` y no en `public`.
 3. `0002_level5_permisos.sql`: fija el `search_path` de las funciones y deja el esquema
    solo para el rol de servicio (`anon` y `authenticated` sin acceso).
+4. `0003_level5_suscripciones_y_ritmo.sql`: confirmación y baja de novedades
+   (`confirm_subscription`, `unsubscribe`) y límite de ritmo (`rate_events`, `rate_hit`).
 
 ## Después de aplicar
 

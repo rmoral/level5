@@ -1356,3 +1356,113 @@ textarea.input {
   justify-content: center;
   gap: 24px;
 }
+
+/* ---------- Formulario: estados ---------- */
+
+.btn:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.btn-outline:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.field-error {
+  margin: 2px 0 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--error);
+}
+
+.field-error--dark {
+  color: var(--error-on-dark);
+}
+
+.input[aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+.form-error {
+  margin: 0;
+  padding: 12px 14px;
+  border-left: 2px solid var(--error);
+  background: var(--surface-2);
+  color: var(--error);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.form-error--dark {
+  background: transparent;
+  color: var(--error-on-dark);
+  border-color: var(--error-on-dark);
+}
+
+.form-sent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.form-sent:focus {
+  outline: none;
+}
+
+.form-sent .btn {
+  align-self: flex-start;
+}
+
+.form-sent-title {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 600;
+}
+
+.news-status {
+  flex-basis: 100%;
+  margin: 0;
+  min-height: 0;
+}
+
+.news-status:empty {
+  display: none;
+}
+
+/* ---------- Páginas de confirmación y baja ---------- */
+
+.token-page {
+  min-height: 100svh;
+  justify-content: center;
+  gap: 40px;
+}
+
+.token-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 640px;
+}
+
+.token-result {
+  font-size: 18px;
+  line-height: 29px;
+  border-left: 2px solid var(--dark-ink);
+  padding-left: 16px;
+}
+
+.token-back {
+  color: var(--dark-ink);
+}
+
+.token-back:hover {
+  color: var(--white);
+}
