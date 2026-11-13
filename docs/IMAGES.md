@@ -6,7 +6,7 @@ Tratamiento común: saturación al 85 % aplicada al archivo. El velo `#0B1A33` a
 
 | Archivo | Hueco | Ficha | Autor | Licencia (comprobada en la ficha) | Ubicación (según la ficha) | Tamaño | Descarga |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| _pendiente_ | Hero (`hero.jpg` + recorte 4:5) | | | | | | |
+| `hero.jpg` + `hero-mobile.jpg` (_archivo pendiente de descarga_) | Hero | [unsplash.com/photos/rTGY77LF8BI](https://unsplash.com/es/fotos/montana-durante-el-dia-rTGY77LF8BI) ("montaña durante el día", publicada el 18-01-2019, Apple iPhone XS) | Kira Laktionov ([@kiralaktionov](https://unsplash.com/@kiralaktionov)) | Uso gratuito bajo la Licencia Unsplash (no Unsplash+). Comprobado en la ficha por Ruben el 13-11-2026 (captura de la ficha) | Encamp, Andorra (según la ficha) | | |
 | _pendiente_ | Andorra (`andorra.jpg`) | | | | | | |
 | _pendiente_ | Fifth Intelligence (`v-intelligence.jpg`) | | | | | | |
 | _pendiente_ | Fifth Foundry (`v-foundry.jpg`) | | | | | | |
@@ -16,3 +16,5 @@ Tratamiento común: saturación al 85 % aplicada al archivo. El velo `#0B1A33` a
 | _pendiente_ | Valira Valley (`v-valira.jpg`) | | | | | | |
 
 La imagen Open Graph es tipográfica y se genera en W2 (sin foto).
+
+Nota: desde el entorno de desarrollo las fichas de Unsplash están tras un control antibots; la licencia y la ubicación se comprueban en la ficha desde el navegador y se anota quién y cuándo.
