@@ -85,9 +85,17 @@ export const verticals: readonly Vertical[] = [
   },
 ];
 
+/**
+ * Orden del círculo (especificación 1.3, §4.4): el orden en que se muestran en la
+ * sección de verticales y en las tarjetas móviles. El pie mantiene el orden de la tabla.
+ */
+export const circleOrder: readonly VerticalId[] = ["valira", "intelligence", "academy", "labs", "foundry", "landing"];
+
 export const verticalById = Object.fromEntries(verticals.map((v) => [v.id, v])) as Record<VerticalId, Vertical>;
 
-export type LinkSection = "verticales" | "circulo" | "movil" | "pie";
+export const verticalsInCircleOrder: readonly Vertical[] = circleOrder.map((id) => verticalById[id]);
+
+export type LinkSection = "verticales" | "movil" | "pie";
 
 /** Enlace de salida con los cuatro UTM de la especificación §4.4. Misma pestaña. */
 export function verticalHref(v: Vertical, locale: Locale, section: LinkSection): string {

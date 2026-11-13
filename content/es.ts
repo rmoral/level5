@@ -26,7 +26,6 @@ export const es = {
   nav: {
     group: "El grupo",
     verticals: "Verticales",
-    circle: "Cómo encaja",
     andorra: "Andorra",
     partners: "Socios",
     cta: "Hablemos",
@@ -72,7 +71,8 @@ export const es = {
   },
   verticals: {
     eyebrow: "02 · Verticales",
-    title: "Seis marcas. Entra por la que necesites hoy.",
+    title: "Un círculo, no un catálogo.",
+    lead: "Cada vertical resuelve un momento distinto de la vida de una empresa y le abre la puerta a la siguiente. Entres por donde entres, tienes al resto del grupo detrás.",
     goTo: "Ir a {domain} ↗",
     comingSoon: "Próximamente",
     items: {
@@ -86,7 +86,7 @@ export const es = {
           "Partner · dirección fraccional para pocas empresas",
         ],
         who: "Para empresas que quieren resultados medibles, no un informe.",
-        cardLabel: "CONSULTORÍA E IA",
+        step: "DIAGNOSTICAMOS",
         cardLine: "Estrategia que se implanta, una iniciativa a la vez.",
         photoAlt: "Reunión de trabajo alrededor de una mesa, junto a un ventanal con luz natural.",
       },
@@ -100,7 +100,7 @@ export const es = {
           "Capital · inversión estructurada operación a operación",
         ],
         who: "Para fundadores con producto de IA y para inversores que buscan operaciones bien preparadas.",
-        cardLabel: "STARTUPS E INVERSIÓN",
+        step: "ACELERAMOS",
         cardLine: "La aceleradora de las startups de IA de Andorra.",
         photoAlt: "Dos personas organizan notas adhesivas en una pizarra blanca sobre una pared naranja.",
       },
@@ -114,7 +114,7 @@ export const es = {
           "Stay · acompañamiento durante todo el primer año",
         ],
         who: "Para empresarios, profesionales y familias que trasladan su vida y su empresa.",
-        cardLabel: "INSTALACIÓN EN ANDORRA",
+        step: "INSTALAMOS",
         cardLine: "Sociedad, residencia y familia con un proceso resuelto.",
         photoAlt: "Camino empedrado sobre Andorra la Vella, con la ciudad y las montañas al fondo.",
       },
@@ -128,7 +128,7 @@ export const es = {
           "Planes de formación y crecimiento para equipos de empresa",
         ],
         who: "Para directivos y equipos que aprenden para aplicarlo el lunes.",
-        cardLabel: "FORMACIÓN",
+        step: "FORMAMOS",
         cardLine: "Talleres presenciales y en directo para equipos que crecen.",
         photoAlt: "Grupo reducido trabajando sobre unos planos extendidos en una mesa, visto desde arriba.",
       },
@@ -142,7 +142,7 @@ export const es = {
           "PodSwitch · vídeo para redes sociales",
         ],
         who: "Para pymes y equipos que quieren herramienta, no proyecto.",
-        cardLabel: "SOFTWARE",
+        step: "EQUIPAMOS",
         cardLine: "Aplicaciones propias por suscripción, listas para usar.",
         photoAlt: "Manos tecleando en un portátil sobre una mesa de madera, en plano corto.",
       },
@@ -156,27 +156,14 @@ export const es = {
           "Entrar en el Club es gratis; la membresía incluye todas las Club Nights",
         ],
         who: "Para empresarios y directivos residentes, y para quien piensa en serlo.",
-        cardLabel: "MEDIA Y COMUNIDAD",
+        step: "NOS CONOCEMOS",
         cardLine: "Pódcast, medio y Valira Club.",
         photoAlt: "Dos micrófonos de estudio en primer plano.",
       },
     },
   },
-  circle: {
-    eyebrow: "03 · Cómo encaja",
-    title: "Un círculo, no un catálogo.",
-    lead: "Cada vertical resuelve un momento distinto de la vida de una empresa y le abre la puerta a la siguiente. Entres por donde entres, tienes al resto del grupo detrás.",
-    steps: [
-      { label: "NOS CONOCEMOS", vertical: "valira", body: "El pódcast y los encuentros donde el ecosistema de Andorra hace negocio." },
-      { label: "DIAGNOSTICAMOS", vertical: "intelligence", body: "Un Audit de tres semanas dice qué mover primero y con qué métrica." },
-      { label: "FORMAMOS", vertical: "academy", body: "El equipo aprende lo que el plan le va a pedir, presencial o en directo." },
-      { label: "EQUIPAMOS", vertical: "labs", body: "Aplicaciones propias para operar mejor desde el primer mes." },
-      { label: "ACELERAMOS", vertical: "foundry", body: "Mentores, clientes piloto e inversores para startups andorranas de IA." },
-      { label: "INSTALAMOS", vertical: "landing", body: "Sociedad, residencia y familia en Andorra con un proceso resuelto." },
-    ],
-  },
   andorra: {
-    eyebrow: "04 · Por qué Andorra",
+    eyebrow: "03 · Por qué Andorra",
     title: "Un país del tamaño justo para probar rápido y crecer hacia fuera.",
     reasons: [
       {
@@ -195,7 +182,7 @@ export const es = {
     photoAlt: "",
   },
   partners: {
-    eyebrow: "05 · Quién está detrás",
+    eyebrow: "04 · Quién está detrás",
     title: "Dos sociedades andorranas, una mesa.",
     lead: "Level Five lo forman BrightTech y Saikaris. Las dos trabajan como un solo equipo en todas las verticales, con una red de mentores y colaboradores que entra cuando el proyecto lo pide.",
     brighttech: {
@@ -208,7 +195,7 @@ export const es = {
     },
   },
   contact: {
-    eyebrow: "06 · Contacto",
+    eyebrow: "05 · Contacto",
     title: "Cuéntanos qué necesitas. Nosotros te decimos por dónde empezar.",
     next: [
       "Respondemos en un día laborable.",

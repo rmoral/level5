@@ -680,8 +680,7 @@ section[id] {
 }
 
 .v-tab .mono-index {
-  width: 28px;
-  flex-shrink: 0;
+  margin-bottom: 2px;
 }
 
 .v-tab-text {
@@ -948,64 +947,6 @@ html:not(.js) .v-tab[aria-selected="true"] .v-dot {
 
   .v-cards {
     display: flex;
-  }
-}
-
-/* ---------- Cómo encaja ---------- */
-
-.circle-intro {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px 80px;
-  align-items: end;
-}
-
-.circle-intro > div {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.steps {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.steps > li {
-  padding: 28px 24px 32px;
-}
-
-.step-link {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-decoration: none;
-  height: 100%;
-}
-
-.step-name {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 600;
-}
-
-.step-link:hover .step-name {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.step-body {
-  font-size: 14px;
-  line-height: 21px;
-  color: var(--ink-2);
-}
-
-@media (max-width: 859px) {
-  .circle-intro {
-    gap: 20px;
-  }
-
-  .steps > li {
-    padding: 20px;
   }
 }
 

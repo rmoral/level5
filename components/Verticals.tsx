@@ -2,9 +2,12 @@ import type { CSSProperties } from "react";
 import type { Dictionary } from "@/content";
 import { images } from "@/content/images";
 import type { Locale } from "@/content/locales";
-import { verticalHref, verticals, type Vertical } from "@/content/verticals";
+import { verticalHref, verticalsInCircleOrder, type Vertical } from "@/content/verticals";
 import { Photo } from "./Photo";
 import { VerticalTabs } from "./VerticalTabs";
+
+/** Número del paso en el círculo: 01…06. */
+const stepNumber = (i: number) => String(i + 1).padStart(2, "0");
 
 const accentStyle = (v: Vertical) => ({ "--accent": `var(${v.accentVar})` }) as CSSProperties;
 
@@ -50,31 +53,32 @@ export function Verticals({ t, locale }: { t: Dictionary; locale: Locale }) {
         <h2 id="verticales-titulo" className="h2" tabIndex={-1}>
           {t.verticals.title}
         </h2>
+        <p className="lead">{t.verticals.lead}</p>
       </div>
 
-      {/* ≥ 860 px: pestañas (lista + ficha). En W2, fijado por scroll a partir de 1024 px. */}
+      {/* ≥ 860 px: pestañas (lista + ficha) en el orden del círculo. En W2, fijado por scroll a partir de 1024 px. */}
       <VerticalTabs
         label={t.a11y.verticalsTablist}
-        tabs={verticals.map((v) => ({
+        tabs={verticalsInCircleOrder.map((v, i) => ({
           id: v.id,
-          index: v.index,
+          step: `${stepNumber(i)} · ${t.verticals.items[v.id].step}`,
           name: v.name,
           short: t.verticals.items[v.id].short,
           style: accentStyle(v),
         }))}
-        panels={verticals.map((v) => (
+        panels={verticalsInCircleOrder.map((v) => (
           <Panel key={v.id} v={v} t={t} locale={locale} />
         ))}
       />
 
       {/* < 860 px: seis tarjetas apiladas enlazadas a su web (artboard Movil) */}
       <ul className="v-cards">
-        {verticals.map((v) => {
+        {verticalsInCircleOrder.map((v, i) => {
           const c = t.verticals.items[v.id];
           const body = (
             <>
               <span className="mono-index">
-                {v.index} · {c.cardLabel}
+                {stepNumber(i)} · {c.step}
               </span>
               <span className="v-card-name">
                 {v.name}

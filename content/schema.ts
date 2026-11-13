@@ -23,8 +23,8 @@ const verticalCopy = z.strictObject({
   lead: text,
   offer: triple(text),
   who: text,
-  /** Etiqueta en mono de la tarjeta móvil (artboard Movil). */
-  cardLabel: text,
+  /** Paso del círculo, en mono en la pestaña y en la tarjeta móvil ("NOS CONOCEMOS"). */
+  step: text,
   /** Frase de la tarjeta móvil (artboard Movil). */
   cardLine: text,
   /** Texto alternativo de la fotografía de la ficha. */
@@ -58,7 +58,6 @@ export const dictionarySchema = z.strictObject({
   nav: z.strictObject({
     group: text,
     verticals: text,
-    circle: text,
     andorra: text,
     partners: text,
     cta: text,
@@ -81,16 +80,11 @@ export const dictionarySchema = z.strictObject({
   verticals: z.strictObject({
     eyebrow: text,
     title: text,
+    lead: text,
     /** "Ir a {domain} ↗" */
     goTo: text.includes("{domain}"),
     comingSoon: text,
     items: verticalsCopy,
-  }),
-  circle: z.strictObject({
-    eyebrow: text,
-    title: text,
-    lead: text,
-    steps: z.array(z.strictObject({ label: text, vertical: z.enum(verticalIds), body: text })).length(6),
   }),
   andorra: z.strictObject({
     eyebrow: text,
