@@ -6,11 +6,9 @@ import { z } from "zod";
  * clave, la compilación falla (tipo) y la validación en build también (zod).
  */
 
-export const verticalIds = ["intelligence", "foundry", "landing", "academy", "labs", "valira"] as const;
-export type VerticalId = (typeof verticalIds)[number];
+import { interestIds, verticalIds, type InterestId, type VerticalId } from "./ids";
 
-export const interestIds = [...verticalIds, "grupo", "nose"] as const;
-export type InterestId = (typeof interestIds)[number];
+export { interestIds, verticalIds, type InterestId, type VerticalId };
 
 const text = z.string().min(1);
 const triple = <T extends z.ZodType>(item: T) => z.tuple([item, item, item]);
@@ -123,6 +121,39 @@ export const dictionarySchema = z.strictObject({
       body: text,
       again: text,
     }),
+    errors: z.strictObject({
+      required: text,
+      email: text,
+      disposable: text,
+      tooLong: text,
+      consent: text,
+      tooFast: text,
+      rateLimited: text,
+      generic: text,
+      summary: text,
+    }),
+  }),
+  /** Páginas /confirmar/[token] y /baja/[token]. */
+  subscription: z.strictObject({
+    confirm: z.strictObject({
+      title: text,
+      body: text,
+      button: text,
+      confirmed: text,
+      alreadyConfirmed: text,
+      unsubscribed: text,
+      notFound: text,
+    }),
+    unsubscribe: z.strictObject({
+      title: text,
+      body: text,
+      button: text,
+      unsubscribed: text,
+      alreadyUnsubscribed: text,
+      notFound: text,
+    }),
+    error: text,
+    back: text,
   }),
   /** Correos al visitante, en su idioma (especificación §5.2). */
   mail: z.strictObject({

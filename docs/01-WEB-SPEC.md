@@ -138,7 +138,7 @@ Todo enlace de salida a una vertical lleva `utm_source=level5&utm_medium=grupo&u
 
 **4.9 Pie.** Lockup en negativo, alta a novedades (correo + botón), enlaces a las seis verticales, enlaces del sitio, datos de la sociedad y legales.
 
-**4.10 Sociedad en constitución.** A 13 de noviembre de 2026 Level 5, SL **no está registrada**: no hay NRT, domicilio social ni datos registrales. Mientras sea así, el pie dice "Level 5, SL (en constitución) · Principat d'Andorra" y esos datos salen de `settings` (`company_legal`), de modo que al inscribirse la sociedad se completan sin tocar código. El aviso legal y la política de privacidad necesitan un titular y un responsable del tratamiento identificados: **el formulario no se publica** hasta que la gestoría confirme quién figura como responsable mientras la sociedad no esté inscrita (decisión abierta 8).
+**4.10 Sociedad en constitución.** A 13 de noviembre de 2026 Level 5, SL **no está registrada**: no hay NRT, domicilio social ni datos registrales. Mientras sea así, el pie dice "Level 5, SL (en constitución) · Principat d'Andorra" y esos datos salen de `settings` (`company_legal`), de modo que al inscribirse la sociedad se completan sin tocar código. El aviso legal y la política de privacidad necesitan un titular y un responsable del tratamiento identificados: los socios han fijado como responsable a **Level 5, SL** (13 de noviembre de 2026) y el formulario se publica con ese dato; los textos legales de la gestoría siguen pendientes (decisión abierta 7).
 
 **Cabecera.** Lockup Level Five, anclas (El grupo · Verticales · Andorra · Socios), selector de idioma (ES · CA · FR · EN) y botón "Hablemos". Comportamiento en sección 6.2. Por debajo de 860 px se pliega a botón de menú con panel a pantalla completa, con el selector de idioma dentro.
 
@@ -190,7 +190,7 @@ Campo trampa, tiempo mínimo de 3 s entre carga y envío, límite de ritmo por I
 
 RLS activado y sin políticas públicas: el navegador nunca toca las tablas; todo pasa por acciones de servidor con la clave de servicio.
 
-**Alojamiento (cambio de la versión 1.4).** level5.ad no tiene proyecto de Supabase propio: sus tablas, tipos y funciones viven en un **esquema `level5` dentro del proyecto de Fifth Landing**, separado de las tablas de la vertical. Ninguna consulta de level5.ad se guarda en tablas de Fifth Landing ni al revés, de modo que se mantiene la separación de bases de contactos de la sección 5.2. La migración `0001` se aplica sin cambios dentro de ese esquema y la configuración propia del esquema (permisos, `search_path` de las funciones, exposición a la API) va en migraciones nuevas. Solo el rol de servicio puede leer, escribir y ejecutar las funciones del esquema; `anon` y `authenticated` no tienen acceso. La clave de servicio del proyecto da acceso también a los datos de Fifth Landing: se guarda solo en las variables del servidor y la gestoría debe confirmar este alojamiento junto con la decisión abierta 8.
+**Alojamiento (cambio de la versión 1.4).** level5.ad no tiene proyecto de Supabase propio: sus tablas, tipos y funciones viven en un **esquema `level5` dentro del proyecto de Fifth Landing**, separado de las tablas de la vertical. Ninguna consulta de level5.ad se guarda en tablas de Fifth Landing ni al revés, de modo que se mantiene la separación de bases de contactos de la sección 5.2. La migración `0001` se aplica sin cambios dentro de ese esquema y la configuración propia del esquema (permisos, `search_path` de las funciones, exposición a la API) va en migraciones nuevas. Solo el rol de servicio puede leer, escribir y ejecutar las funciones del esquema; `anon` y `authenticated` no tienen acceso. La clave de servicio del proyecto da acceso también a los datos de Fifth Landing: se guarda solo en las variables del servidor y el responsable del tratamiento es Level 5, SL (sección 4.10).
 
 ---
 
@@ -351,6 +351,7 @@ La identidad es la del **Manual de identidad Level Five v1.0**, en el sistema de
 | Valira Valley en la portada | Sí, junto al resto de verticales |
 | Dominio de Fifth Intelligence | `www.fifth-intelligence.com` |
 | Quién se presenta como socio | Las dos sociedades, BrightTech y Saikaris; sin fichas de personas |
+| Responsable del tratamiento de los datos del formulario | Level 5, SL (decisión de los socios, 13 de noviembre de 2026); el formulario se publica |
 
 ### 13.2 Abiertas
 
@@ -363,7 +364,6 @@ La identidad es la del **Manual de identidad Level Five v1.0**, en el sistema de
 | 5 | Correo o teléfono público en el pie | Socios; por defecto solo formulario, como en el resto del grupo |
 | 6 | Sustituir las fotos de banco de las fichas por fotos propias | Socios, tras el lanzamiento |
 | 7 | Textos legales | Gestoría o despacho |
-| 8 | Quién figura como titular del sitio y responsable del tratamiento de datos mientras Level 5, SL no esté inscrita, o si el formulario espera a la inscripción | Gestoría o despacho, con los socios |
 
 ---
 

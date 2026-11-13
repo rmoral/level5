@@ -21,7 +21,7 @@ Si el código y la especificación discrepan, manda la especificación. Si la es
 - Cada fotografía de banco se registra en `docs/IMAGES.md` con fuente, autor y licencia comprobada.
 - Sin precios, sin logotipos de clientes, sin cifras fiscales en esta página.
 - Los socios que se muestran son las sociedades BrightTech y Saikaris: sin nombres, retratos ni perfiles de personas.
-- Level 5, SL está en constitución: los datos legales salen de `settings.company_legal`; no se inventa NRT ni domicilio, y el formulario no pasa a producción sin responsable del tratamiento confirmado (especificación §4.10).
+- Level 5, SL está en constitución: los datos legales salen de `settings.company_legal`; no se inventa NRT ni domicilio. Responsable del tratamiento del formulario: Level 5, SL (confirmado por los socios, especificación §4.10).
 
 ## Forma de trabajar
 - Un hito por sesión (W1, W2, W3). No se pasa al siguiente sin cumplir sus criterios.
