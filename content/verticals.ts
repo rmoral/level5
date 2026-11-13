@@ -89,7 +89,8 @@ export const verticals: readonly Vertical[] = [
  * Orden del círculo (especificación 1.3, §4.4): el orden en que se muestran en la
  * sección de verticales y en las tarjetas móviles. El pie mantiene el orden de la tabla.
  */
-export const circleOrder: readonly VerticalId[] = ["valira", "intelligence", "academy", "labs", "foundry", "landing"];
+// Fifth Landing abre el círculo; Valira Valley lo cierra porque es la que relaciona a todas.
+export const circleOrder: readonly VerticalId[] = ["landing", "intelligence", "academy", "labs", "foundry", "valira"];
 
 export const verticalById = Object.fromEntries(verticals.map((v) => [v.id, v])) as Record<VerticalId, Vertical>;
 
