@@ -289,6 +289,96 @@ export const es = {
       ignore: "Si no lo has pedido tú, ignora este mensaje: no te enviaremos nada.",
     },
   },
+  // [no-canvas] Páginas legales. Los datos son los del sitio (especificación y código);
+  // los apartados "pending" los redacta la gestoría (decisión abierta 7).
+  legal: {
+    provisional: "Texto provisional. La redacción legal definitiva está pendiente de la gestoría.",
+    pendingLabel: "Pendiente de la gestoría",
+    back: "Volver a la portada",
+    nav: "Textos legales",
+    holder: {
+      title: "Titular del sitio y responsable del tratamiento",
+      contact: "Contacto",
+      contactValue: "Formulario de contacto de esta web",
+      nrt: "NRT",
+      address: "Domicilio social",
+      registry: "Datos registrales",
+      pendingRegistration: "[pendiente de la inscripción de la sociedad]",
+    },
+    pages: {
+      notice: {
+        title: "Aviso legal",
+        description: "Aviso legal de level5.ad, sitio de Level Five.",
+        showHolder: true,
+        sections: [
+          { title: "Objeto", text: ["level5.ad es el sitio institucional de Level Five: presenta el grupo, enlaza a sus seis verticales y recoge consultas y altas a las novedades."], list: [], pending: "Condiciones de acceso y uso del sitio." },
+          { title: "Propiedad intelectual e industrial", text: [], list: [], pending: "Titularidad de marcas, textos e imágenes; licencias de las fotografías de banco." },
+          { title: "Responsabilidad", text: [], list: [], pending: "Limitación de responsabilidad sobre el contenido y los enlaces a las webs de las verticales." },
+          { title: "Legislación aplicable y jurisdicción", text: [], list: [], pending: "Ley aplicable y tribunales competentes." },
+        ],
+      },
+      privacy: {
+        title: "Política de privacidad",
+        description: "Cómo trata Level 5, SL los datos que recoge level5.ad.",
+        showHolder: true,
+        sections: [
+          {
+            title: "Qué datos tratamos",
+            text: [],
+            list: [
+              "Consulta: nombre, correo, empresa (opcional), el tema que eliges, el texto de la consulta, el idioma de la página, la página desde la que escribes y, si llegas desde una campaña, sus parámetros (UTM).",
+              "Novedades: tu correo y el idioma.",
+              "Consentimientos: qué aceptas, la versión del texto, el idioma, la página y la fecha. Cada cambio queda registrado como una entrada nueva.",
+              "Prevención de abusos: no guardamos tu dirección IP. Para limitar los envíos repetidos usamos un código cifrado de la IP y del correo que cambia cada día y se borra a las 24 horas.",
+            ],
+            pending: "",
+          },
+          {
+            title: "Para qué los usamos",
+            text: [],
+            list: [
+              "Responder a tu consulta y trasladarla a la vertical que corresponda.",
+              "Enviarte las novedades de Level Five, solo si marcas la casilla y lo confirmas desde el enlace que te enviamos (doble confirmación).",
+              "Evitar envíos abusivos del formulario.",
+            ],
+            pending: "Base jurídica de cada tratamiento.",
+          },
+          {
+            title: "Quién más interviene",
+            text: ["Usamos estos proveedores para que el sitio funcione:"],
+            list: [
+              "Vercel: alojamiento del sitio.",
+              "Supabase: base de datos donde se guardan las consultas y los consentimientos.",
+              "El proveedor de correo de level5.ad: envío de los correos.",
+            ],
+            pending: "Condición de encargados del tratamiento, ubicación de los datos y, si las hay, transferencias internacionales.",
+          },
+          { title: "Cuánto tiempo los conservamos", text: [], list: [], pending: "Plazos de conservación de consultas, consentimientos y altas a novedades." },
+          {
+            title: "Tus derechos",
+            text: ["Puedes pedir la baja de las novedades en cualquier momento respondiendo a cualquiera de nuestros correos."],
+            list: [],
+            pending: "Derechos reconocidos, cómo ejercerlos y autoridad de control ante la que reclamar.",
+          },
+        ],
+      },
+      cookies: {
+        title: "Política de cookies",
+        description: "level5.ad no usa cookies.",
+        showHolder: false,
+        sections: [
+          {
+            title: "Este sitio no usa cookies",
+            text: [
+              "level5.ad no instala cookies ni guarda información en tu navegador, y no usa píxeles ni servicios de seguimiento de terceros. Las fuentes y las imágenes se sirven desde el propio sitio.",
+            ],
+            list: [],
+            pending: "Redacción definitiva de esta política y, si se añade, descripción de la analítica sin cookies.",
+          },
+        ],
+      },
+    },
+  },
   notFound: {
     title: "Esta página no existe.", // [no-canvas]
     back: "Volver a la portada", // [no-canvas]

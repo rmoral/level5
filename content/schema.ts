@@ -37,6 +37,21 @@ const interestOptions = z.strictObject(
   Object.fromEntries(interestIds.map((id) => [id, text])) as Record<InterestId, typeof text>,
 );
 
+const legalPage = z.strictObject({
+  title: text,
+  description: text,
+  showHolder: z.boolean(),
+  sections: z.array(
+    z.strictObject({
+      title: text,
+      text: z.array(text),
+      list: z.array(text),
+      /** Lo que debe redactar la gestoría; vacío si la sección ya está completa. */
+      pending: z.string(),
+    }),
+  ),
+});
+
 export const dictionarySchema = z.strictObject({
   meta: z.strictObject({
     title: text,
@@ -173,6 +188,23 @@ export const dictionarySchema = z.strictObject({
       fallback: text,
       ignore: text,
     }),
+  }),
+  /** Páginas legales (/legal/*): datos comprobados y huecos para la gestoría (§3.1). */
+  legal: z.strictObject({
+    provisional: text,
+    pendingLabel: text,
+    back: text,
+    nav: text,
+    holder: z.strictObject({
+      title: text,
+      contact: text,
+      contactValue: text,
+      nrt: text,
+      address: text,
+      registry: text,
+      pendingRegistration: text,
+    }),
+    pages: z.strictObject({ notice: legalPage, privacy: legalPage, cookies: legalPage }),
   }),
   notFound: z.strictObject({
     title: text,
