@@ -1,0 +1,57 @@
+/* Tokens del sistema Level Five (Manual de identidad v1.0, especificación §8). */
+:root {
+  /* Papel */
+  --surface: #faf9f6;
+  --surface-2: #f1f0ec;
+  --ink: #0b2a5b;
+  --ink-2: #4c5a73;
+  --line: #d9d7d1;
+  --white: #ffffff;
+
+  /* Acento del grupo: el propio azul */
+  --group-blue: #0b2a5b;
+
+  /* Bloques oscuros */
+  --dark-surface: #0b1a33;
+  --dark-surface-2: #132442;
+  --dark-line: #2a3b5c;
+  --dark-ink: #faf9f6;
+  --dark-ink-2: #aeb8cb;
+
+  /* Borde de campos (canvas) */
+  --field-line: #aeb8cb;
+
+  /* Acentos de vertical: nunca dos visibles a la vez */
+  --accent-intelligence: #2a50d6;
+  --accent-foundry: #e8571e; /* nunca como color de texto */
+  --accent-landing: #2f7d5b;
+  --accent-academy: #8a3fb8;
+  --accent-labs: #b8336a; /* provisional */
+  --accent-valira: #0b7c8c;
+
+  /* Velo de fotografías a sangre (#0B1A33): 72 % en hero y Andorra por contraste (docs/DECISIONS.md, 15 y 16) */
+  --veil: rgb(11 26 51 / 0.72);
+
+  /* Forma */
+  --radius-0: 0;
+  --radius-control: 4px;
+  --radius-card: 6px;
+
+  /* Ritmo */
+  --gutter: clamp(20px, 5vw, 80px);
+  --section-y: 120px;
+
+  /* Movimiento (W2): una sola curva */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Tipografía: las familias las inyecta next/font (lib/fonts.ts) */
+  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-lockup: var(--font-outfit), var(--font-instrument-sans), sans-serif;
+}
+
+@media (max-width: 859px) {
+  :root {
+    --section-y: 56px;
+  }
+}
