@@ -15,13 +15,13 @@ export const images: {
 } = {
   hero: { src: "/img/hero.jpg", width: 2400, height: 1400 },
   heroMobile: { src: "/img/hero-mobile.jpg", width: 1280, height: 1600 },
-  andorra: null,
+  andorra: { src: "/img/andorra.jpg", width: 2400, height: 1350 },
   verticals: {
     intelligence: null,
     foundry: null,
-    landing: null,
+    landing: { src: "/img/v-landing.jpg", width: 1600, height: 900 },
     academy: null,
-    labs: null,
+    labs: { src: "/img/v-labs.jpg", width: 1600, height: 900 },
     valira: null,
   },
 };

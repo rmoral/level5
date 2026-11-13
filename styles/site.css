@@ -450,9 +450,6 @@ section[id] {
   background: var(--veil);
 }
 
-.hero-media::after {
-  background: var(--veil-hero);
-}
 
 .media-placeholder {
   position: absolute;
@@ -1054,8 +1051,9 @@ html:not(.js) .v-tab[aria-selected="true"] .v-dot {
   gap: 10px;
 }
 
-.reasons p {
-  color: var(--dark-ink-2);
+.reasons p,
+.andorra .eyebrow {
+  color: var(--dark-ink);
 }
 
 @media (max-width: 859px) {

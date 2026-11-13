@@ -116,7 +116,7 @@ export const es = {
         who: "Para empresarios, profesionales y familias que trasladan su vida y su empresa.",
         cardLabel: "INSTALACIÓN EN ANDORRA",
         cardLine: "Sociedad, residencia y familia con un proceso resuelto.",
-        photoAlt: "Calle de Andorra entre montañas.",
+        photoAlt: "Camino empedrado sobre Andorra la Vella, con la ciudad y las montañas al fondo.",
       },
       academy: {
         short: "Formación para equipos que crecen",
@@ -144,7 +144,7 @@ export const es = {
         who: "Para pymes y equipos que quieren herramienta, no proyecto.",
         cardLabel: "SOFTWARE",
         cardLine: "Aplicaciones propias por suscripción, listas para usar.",
-        photoAlt: "Manos trabajando ante una pantalla, en plano corto.",
+        photoAlt: "Manos tecleando en un portátil sobre una mesa de madera, en plano corto.",
       },
       valira: {
         short: "Medio, pódcast y comunidad",

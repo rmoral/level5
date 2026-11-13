@@ -7,14 +7,24 @@ Tratamiento común: saturación al 85 % aplicada al archivo. El velo `#0B1A33` a
 | Archivo | Hueco | Ficha | Autor | Licencia (comprobada en la ficha) | Ubicación (según la ficha) | Tamaño | Descarga |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `hero.jpg` (2400×1400) + `hero-mobile.jpg` (1280×1600, 4:5) | Hero | [unsplash.com/photos/rTGY77LF8BI](https://unsplash.com/es/fotos/montana-durante-el-dia-rTGY77LF8BI) ("montaña durante el día", publicada el 18-01-2019, Apple iPhone XS) | Kira Laktionov ([@kiralaktionov](https://unsplash.com/@kiralaktionov)) | Uso gratuito bajo la Licencia Unsplash (no Unsplash+). Comprobado en la ficha por Ruben el 13-11-2026 (captura de la ficha) | Encamp, Andorra (según la ficha) | Original 2400×1600; recorte centrado y saturación al 85 % (`scripts/process-photo.mjs`) | 13-11-2026 (archivo descargado de la ficha y aportado por Ruben) |
-| _pendiente_ | Andorra (`andorra.jpg`) | | | | | | |
+| `andorra.jpg` (2400×1350) | Andorra | [unsplash.com/photos/oSGl_yOaMc4](https://unsplash.com/photos/a-winding-road-through-a-forest-oSGl_yOaMc4) ("Un camino sinuoso a través de un bosque", publicada el 27-11-2022, DJI FC7203) | Adrià Sánchez Roqué | Uso gratuito bajo la Licencia Unsplash. Comprobado en la ficha por Ruben el 13-11-2026 | Andorra (según la ficha) | Original 2400×1350, sin ampliar (la especificación pide 2400×1400; se sirve en `cover`); saturación al 85 % | 13-11-2026 (aportado por Ruben) |
 | _pendiente_ | Fifth Intelligence (`v-intelligence.jpg`) | | | | | | |
 | _pendiente_ | Fifth Foundry (`v-foundry.jpg`) | | | | | | |
-| _pendiente_ | Fifth Landing (`v-landing.jpg`) | | | | | | |
+| `v-landing.jpg` (1600×900) | Fifth Landing | [unsplash.com/photos/htxYtc81yxA](https://unsplash.com/photos/green-trees-on-mountain-near-body-of-water-during-daytime-htxYtc81yxA) ("Árboles verdes en la montaña cerca del cuerpo de agua durante el día", publicada el 11-09-2020, Canon EOS 600D) | Di Ya (@diiiya) | Uso gratuito bajo la Licencia Unsplash. Comprobado en la ficha por Ruben el 13-11-2026 | Andorra la Vella, Andorra (según la ficha) | Original 2400×1600; recorte centrado 16:9; saturación al 85 % | 13-11-2026 (aportado por Ruben) |
 | _pendiente_ | Fifth Academy (`v-academy.jpg`) | | | | | | |
-| _pendiente_ | Fifth Labs (`v-labs.jpg`) | | | | | | |
+| `v-labs.jpg` (1600×900) | Fifth Labs | [unsplash.com/photos/AnB0zwEeuYU](https://unsplash.com/photos/hands-typing-on-a-laptop-computer-keyboard-AnB0zwEeuYU) ("Manos escribiendo en el teclado de una computadora portátil", publicada el 26-09-2025) | Vitaly Gariev (@silverkblack) | Uso gratuito bajo la Licencia Unsplash. Comprobado en la ficha por Ruben el 13-11-2026 | Sin ubicación en la ficha | Original 3840×2160; recortado el borde izquierdo (asomaba el logotipo del portátil); saturación al 85 % | 13-11-2026 (aportado por Ruben) |
 | _pendiente_ | Valira Valley (`v-valira.jpg`) | | | | | | |
 
 La imagen Open Graph es tipográfica y se genera en W2 (sin foto).
 
 Nota: desde el entorno de desarrollo las fichas de Unsplash están tras un control antibots; la licencia y la ubicación se comprueban en la ficha desde el navegador y se anota quién y cuándo.
+
+## Descartadas (13-11-2026)
+
+| Hueco | Ficha | Motivo |
+| --- | --- | --- |
+| Fifth Intelligence | [Sable Flow, KHpjeuaWOec](https://unsplash.com/photos/a-group-of-people-sitting-around-a-table-KHpjeuaWOec) | Marca "Sable Flow" en el tablero y logotipo de Apple en el portátil; no se pueden recortar sin bajar de 1600 px. |
+| Fifth Foundry | [Vitaly Gariev, CdTQI-Nh7J4](https://unsplash.com/photos/team-collaborating-around-a-whiteboard-in-an-office-CdTQI-Nh7J4) | Texto legible en la pizarra y en la pared (PLAN, GOAL, nombres). |
+| Fifth Landing | [Datingscout, FmEnFQ5APLQ](https://unsplash.com/photos/a-city-in-the-mountains-FmEnFQ5APLQ) | Marca Repsol visible en la gasolinera. |
+| Valira Valley | [Hc Digital, g0PcDhany4Y](https://unsplash.com/photos/a-recording-studio-with-microphones-headphones-and-microphones-g0PcDhany4Y) | Marca RØDE en la mesa de mezclas y rótulo "DISTRICT" en la mesa; ubicada en Perth. |
+| Valira Valley | [Carlos Gil, AsxOJcsaR4g](https://unsplash.com/photos/speaker-presenting-on-stage-to-an-audience-AsxOJcsaR4g) | Pantallas con texto, logotipos y un retrato. |

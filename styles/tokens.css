@@ -29,9 +29,8 @@
   --accent-labs: #b8336a; /* provisional */
   --accent-valira: #0b7c8c;
 
-  /* Velo de fotografías a sangre (#0B1A33). Hero al 72 % por contraste (docs/DECISIONS.md, 15) */
-  --veil: rgb(11 26 51 / 0.55);
-  --veil-hero: rgb(11 26 51 / 0.72);
+  /* Velo de fotografías a sangre (#0B1A33): 72 % en hero y Andorra por contraste (docs/DECISIONS.md, 15 y 16) */
+  --veil: rgb(11 26 51 / 0.72);
 
   /* Forma */
   --radius-0: 0;
