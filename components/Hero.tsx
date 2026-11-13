@@ -1,22 +1,33 @@
 import { getImageProps } from "next/image";
+import { preload } from "react-dom";
 import type { Dictionary } from "@/content";
 import { images } from "@/content/images";
 
-/** Fotografía del hero con dirección de arte: recorte 4:5 por debajo de 860 px. */
+const MOBILE = "(max-width: 859px)";
+const DESKTOP = "(min-width: 860px)";
+
+/**
+ * Fotografía del hero con dirección de arte: recorte 4:5 por debajo de 860 px.
+ * Precarga con prioridad alta de la variante que corresponde a cada ancho
+ * (especificación §6.6). Calidad 55: la foto va bajo un velo del 72 %.
+ */
 function HeroPicture({ alt }: { alt: string }) {
   const { hero, heroMobile } = images;
   if (!hero) return <div className="media-placeholder" aria-hidden="true" />;
-  const common = { alt, quality: 70, priority: true };
+  const common = { alt, quality: 55, priority: true };
   const {
     props: { srcSet: desktop, ...rest },
   } = getImageProps({ ...common, ...hero, sizes: "100vw" });
   const mobile = heroMobile
     ? getImageProps({ ...common, ...heroMobile, sizes: "100vw" }).props.srcSet
     : undefined;
+  const hint = { as: "image" as const, imageSizes: "100vw", fetchPriority: "high" as const };
+  if (mobile) preload(rest.src, { ...hint, imageSrcSet: mobile, media: MOBILE });
+  preload(rest.src, { ...hint, imageSrcSet: desktop, media: mobile ? DESKTOP : undefined });
   return (
     <picture>
-      {mobile && <source media="(max-width: 859px)" srcSet={mobile} sizes="100vw" />}
-      <source media="(min-width: 860px)" srcSet={desktop} sizes="100vw" />
+      {mobile && <source media={MOBILE} srcSet={mobile} sizes="100vw" />}
+      <source media={DESKTOP} srcSet={desktop} sizes="100vw" />
       <img {...rest} alt={rest.alt ?? alt} />
     </picture>
   );
