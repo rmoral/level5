@@ -2,13 +2,15 @@
 
 13 de noviembre de 2026 · @Ruben
 
-Versión 1.3 · Level 5, SL · Complemento del canvas **"Level 5 — web (level5.ad)"** (Claude Design, sistema Level Five): https://claude.ai/artifact/NgFf6Y7afPtGKpZ4DLYbkS
+Versión 1.4 · Level 5, SL · Complemento del canvas **"Level 5 — web (level5.ad)"** (Claude Design, sistema Level Five): https://claude.ai/artifact/NgFf6Y7afPtGKpZ4DLYbkS
 
 Cambios de la 1.1: lanzamiento en cuatro idiomas con castellano por defecto (sección 3.5), dominio de Fifth Intelligence confirmado, Valira Valley confirmada en portada.
 
 Cambios de la 1.2: los socios que se presentan son las dos sociedades, BrightTech y Saikaris, no personas (sección 4.7); Level 5, SL aún no está registrada (sección 4.10).
 
 Cambios de la 1.3: "Cómo encaja" se integra en "Verticales" para no repetir el catálogo de marcas (secciones 4.4 y 4.5). Los titulares y las entradillas de sección del canvas se sustituyen por una versión revisada por los socios (`content/es.ts`; docs/DECISIONS.md, 19), con el mismo tuteo.
+
+Cambios de la 1.4: los datos del formulario se alojan en un esquema `level5` del proyecto de Supabase de Fifth Landing, no en un proyecto propio (sección 5.4).
 
 ---
 
@@ -186,7 +188,9 @@ Campo trampa, tiempo mínimo de 3 s entre carga y envío, límite de ritmo por I
 | `subscriptions` | Alta a novedades: `pending` → `confirmed` → `unsubscribed`, con tokens de confirmación y baja |
 | `settings` | Versión de consentimientos, correos de aviso, URL de las verticales, datos legales de la sociedad (`company_legal`) |
 
-RLS activado y sin políticas públicas: el navegador nunca toca las tablas; todo pasa por acciones de servidor con la clave de servicio. Proyecto de Supabase propio de level5.ad, separado de los de las verticales.
+RLS activado y sin políticas públicas: el navegador nunca toca las tablas; todo pasa por acciones de servidor con la clave de servicio.
+
+**Alojamiento (cambio de la versión 1.4).** level5.ad no tiene proyecto de Supabase propio: sus tablas, tipos y funciones viven en un **esquema `level5` dentro del proyecto de Fifth Landing**, separado de las tablas de la vertical. Ninguna consulta de level5.ad se guarda en tablas de Fifth Landing ni al revés, de modo que se mantiene la separación de bases de contactos de la sección 5.2. La migración `0001` se aplica sin cambios dentro de ese esquema y la configuración propia del esquema (permisos, `search_path` de las funciones, exposición a la API) va en migraciones nuevas. Solo el rol de servicio puede leer, escribir y ejecutar las funciones del esquema; `anon` y `authenticated` no tienen acceso. La clave de servicio del proyecto da acceso también a los datos de Fifth Landing: se guarda solo en las variables del servidor y la gestoría debe confirmar este alojamiento junto con la decisión abierta 8.
 
 ---
 
@@ -329,7 +333,7 @@ La identidad es la del **Manual de identidad Level Five v1.0**, en el sistema de
 | NRT, domicilio social y datos registrales de Level 5, SL, cuando esté inscrita | Pie y legales (`settings.company_legal`) |
 | Confirmación de `fifth-foundry.com`, y de qué verticales tienen ya web publicada | Enlaces; las que no, salen como "Próximamente" |
 | Registro de `level5.ad` y acceso al DNS | Despliegue |
-| Proyecto de Supabase, datos del SMTP y correos que reciben los avisos | Formulario |
+| Acceso al proyecto de Supabase de Fifth Landing (esquema `level5`), datos del SMTP y correos que reciben los avisos | Formulario |
 | Lockups de las verticales exportados del manual | Fichas de vertical |
 | Textos legales andorranos y cláusulas de consentimiento, en los cuatro idiomas | `/legal/*` y casillas (gestoría o despacho) |
 | Revisión de las traducciones al catalán, francés e inglés | W3 |
