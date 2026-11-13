@@ -1,0 +1,22 @@
+# Decisiones
+
+Una línea de motivo por decisión. Las marcadas "decide tú" en la especificación y las que la especificación no fija.
+
+## W1 (12 de noviembre de 2026)
+
+| # | Decisión | Motivo |
+| --- | --- | --- |
+| 1 | Rutas: segmento `app/[locale]` y `middleware.ts` que reescribe `/` y `/…` a `es` sin cambiar la URL; `/es/…` redirige (308) a `/…`. | Es lo que pide §9 (segmento `[locale]`, castellano en la raíz) y evita dos URL para la misma página. No se lee `Accept-Language` ni el país. |
+| 2 | `/ca`, `/fr`, `/en` devuelven 404 mientras no exista su diccionario (`generateStaticParams` sale de `content/index.ts`). | Publicar el castellano bajo `/fr` incumpliría "sin textos en castellano sueltos" (§10). Al añadir `content/fr.ts` la ruta aparece sola. |
+| 3 | Selector de idioma: los idiomas sin diccionario se muestran sin enlace (y con `title`); los disponibles son enlaces reales con `hreflang` y `lang`. | Un enlace a un 404 es peor que un código inerte; en W3 pasan a enlaces sin tocar el componente. |
+| 4 | Fotografías: la saturación al 85 % se aplica al archivo; el velo `#0B1A33` al 55 % (hero y Andorra) va en CSS (`--veil`). | Un solo archivo por foto, el LCP no se resiente y el velo se puede animar en W2. |
+| 5 | Sin JavaScript, las seis fichas de verticales se muestran apiladas y sin color de acento; con JS (clase `js` puesta antes del primer pintado), pestañas. | La página se lee entera sin JS y nunca hay dos acentos visibles. |
+| 6 | Tarjetas móviles de verticales con regla superior neutra (`--line`), no con el acento de cada marca como en el artboard `Movil`. | El artboard pinta seis acentos a la vez y CLAUDE.md lo prohíbe ("Nunca dos acentos de vertical visibles a la vez"). Pendiente de confirmar con los socios. |
+| 7 | En móvil se muestran las nueve secciones con los textos de `Main`; de `Movil` se toman la composición (menú plegado, hero, tarjetas apiladas) y los textos de las tarjetas de verticales. | `Movil` es una maqueta resumida (omite franja, Cómo encaja, Socios, pie y el campo Empresa, y acorta el consentimiento, que §5.1 exige completo). Pendiente de confirmar con los socios. |
+| 8 | Menú móvil con `<details>`/`<summary>`; un componente cliente pequeño lo cierra al elegir un enlace o con Escape. | Funciona sin JavaScript. |
+| 9 | Hero con altura `max(640px, 100svh)` en lugar de los 820 px del canvas. | Lo fija la especificación §4.1. |
+| 10 | Enlace de LinkedIn del pie oculto mientras `linkedinUrl` sea `null` (`content/site.ts`); NRT y domicilio no se pintan mientras sean `null`. | Dato pendiente (§12): no se inventa ni se enlaza a un ancla falsa como en el canvas. |
+| 11 | Formularios de W1 con `method="post"` sin acción. | Ningún dato personal viaja en la URL (§5.3) antes de que exista la acción de servidor de W2. |
+| 12 | Fuentes con `next/font/google` (se descargan en compilación y se sirven desde el propio dominio), subconjunto `latin`; las seis fuentes de vertical sin precarga; Archivo con el eje `wdth` para el 125 %. | Autoalojadas, cubren ç, l·l, œ y acentos; solo se ve una fuente de vertical a la vez. |
+| 13 | Textos que no están en el canvas, marcados `[no-canvas]` en `content/es.ts`: título de la página, "Saltar al contenido", "Level Five, inicio", "Idioma", "Cerrar menú", "Disponible próximamente" y los dos del 404. | Etiquetas de accesibilidad y metadatos mínimos; la descripción de la página es la entradilla del hero, literal. Las revisan los socios. |
+| 14 | Textos alternativos de las fotos de vertical provisionales hasta elegir las fotografías. | Deben describir la foto real; se reescriben al elegirla. |
