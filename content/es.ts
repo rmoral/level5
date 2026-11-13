@@ -235,6 +235,26 @@ export const es = {
       again: "Enviar otra consulta",
     },
   },
+  // [no-canvas] Correos: textos nuevos, a revisar por los socios. Las dos líneas de
+  // "next" son las de "qué pasa después" del canvas.
+  mail: {
+    ack: {
+      subject: "Hemos recibido tu consulta · Level Five",
+      greeting: "Hola, {name}:",
+      received: "Gracias por escribirnos. Hemos recibido tu consulta.",
+      topic: "Tema",
+      next: ["Respondemos en un día laborable.", "Te ponemos en contacto con la vertical adecuada, o con varias."],
+      reply: "Si quieres añadir algo, responde a este correo.",
+      signature: "El equipo de Level Five",
+    },
+    news: {
+      subject: "Confirma tu alta en las novedades de Level Five",
+      body: "Has pedido recibir las novedades de Level Five por correo. Para completar el alta, confírmala desde este enlace:",
+      button: "Confirmar mi alta",
+      fallback: "Si el botón no funciona, copia este enlace en el navegador:",
+      ignore: "Si no lo has pedido tú, ignora este mensaje: no te enviaremos nada.",
+    },
+  },
   notFound: {
     title: "Esta página no existe.", // [no-canvas]
     back: "Volver a la portada", // [no-canvas]
