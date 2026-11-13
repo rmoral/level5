@@ -102,7 +102,7 @@ export const es = {
         who: "Para fundadores con producto de IA y para inversores que buscan operaciones bien preparadas.",
         cardLabel: "STARTUPS E INVERSIÓN",
         cardLine: "La aceleradora de las startups de IA de Andorra.",
-        photoAlt: "Equipo fundador trabajando ante una pizarra.",
+        photoAlt: "Dos personas organizan notas adhesivas en una pizarra blanca sobre una pared naranja.",
       },
       landing: {
         short: "Recepción e instalación en Andorra",

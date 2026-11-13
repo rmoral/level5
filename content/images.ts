@@ -18,7 +18,7 @@ export const images: {
   andorra: { src: "/img/andorra.jpg", width: 2400, height: 1350 },
   verticals: {
     intelligence: { src: "/img/v-intelligence.jpg", width: 1600, height: 900 },
-    foundry: null,
+    foundry: { src: "/img/v-foundry.jpg", width: 1600, height: 900 },
     landing: { src: "/img/v-landing.jpg", width: 1600, height: 900 },
     academy: { src: "/img/v-academy.jpg", width: 1600, height: 900 },
     labs: { src: "/img/v-labs.jpg", width: 1600, height: 900 },
