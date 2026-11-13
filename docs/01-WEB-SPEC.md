@@ -2,11 +2,13 @@
 
 13 de noviembre de 2026 · @Ruben
 
-Versión 1.2 · Level 5, SL · Complemento del canvas **"Level 5 — web (level5.ad)"** (Claude Design, sistema Level Five): https://claude.ai/artifact/NgFf6Y7afPtGKpZ4DLYbkS
+Versión 1.3 · Level 5, SL · Complemento del canvas **"Level 5 — web (level5.ad)"** (Claude Design, sistema Level Five): https://claude.ai/artifact/NgFf6Y7afPtGKpZ4DLYbkS
 
 Cambios de la 1.1: lanzamiento en cuatro idiomas con castellano por defecto (sección 3.5), dominio de Fifth Intelligence confirmado, Valira Valley confirmada en portada.
 
 Cambios de la 1.2: los socios que se presentan son las dos sociedades, BrightTech y Saikaris, no personas (sección 4.7); Level 5, SL aún no está registrada (sección 4.10).
+
+Cambios de la 1.3: "Cómo encaja" se integra en "Verticales" para no repetir el catálogo de marcas (secciones 4.4 y 4.5).
 
 ---
 
@@ -48,7 +50,7 @@ Patrones observados en webs de holdings, venture studios y consultoras, y cómo 
 
 ### 3.1 v1 (W1–W3)
 
-1. La página con las nueve secciones de la sección 4, en castellano, catalán, francés e inglés (sección 3.5).
+1. La página con las ocho secciones de la sección 4, en castellano, catalán, francés e inglés (sección 3.5).
 2. Sistema de movimiento completo (sección 6) con alternativa sin movimiento.
 3. Formulario de consulta y alta a novedades funcionando de extremo a extremo (sección 5), con correos de acuse, aviso interno y doble opt-in.
 4. Imágenes de banco descargadas, tratadas y servidas desde el propio sitio (sección 7).
@@ -68,7 +70,7 @@ Blog, precios, cuentas de usuario, pagos, chat, píxeles de terceros, panel de a
 ### 3.4 Rutas
 
 ```
-/                         one-page en castellano (anclas #grupo #verticales #circulo #andorra #equipo #contacto)
+/                         one-page en castellano (anclas #grupo #verticales #andorra #equipo #contacto)
 /ca · /fr · /en           la misma página en catalán, francés e inglés
 /confirmar/[token]        confirmación del alta a novedades (doble opt-in)
 /baja/[token]             baja de novedades en un clic
@@ -105,7 +107,7 @@ Orden y contenido según el artboard `Main`. Ids de sección entre paréntesis.
 
 **4.3 El grupo (`#grupo`).** Titular a la izquierda, dos párrafos a la derecha y tres principios en rejilla de reglas (A · B · C).
 
-**4.4 Verticales (`#verticales`).** La sección central. Lista de las seis a la izquierda y ficha a la derecha con: regla superior en el acento de la vertical, fotografía, nombre en la fuente de su logo, descriptor en mono, frase principal, tres líneas de oferta, "para quién" y botón **"Ir a [dominio] ↗"**. En escritorio la sección se fija y avanza con el scroll (sección 6.4); en móvil son seis tarjetas apiladas enlazadas a su web (artboard `Movil`).
+**4.4 Verticales (`#verticales`).** La sección central, que integra la antigua 4.5 "Cómo encaja" (cambio de la versión 1.3). Titular "Un círculo, no un catálogo." y, bajo él, la entradilla de "Cómo encaja" ("Cada vertical resuelve un momento distinto de la vida de una empresa…"). Lista de las seis a la izquierda, **en el orden del círculo**: nos conocemos (Valira Valley) → diagnosticamos (Intelligence) → formamos (Academy) → equipamos (Labs) → aceleramos (Foundry) → instalamos (Landing); cada elemento lleva en mono el número y el paso ("01 · NOS CONOCEMOS"), el nombre y la línea corta. Ficha a la derecha con: regla superior en el acento de la vertical, fotografía, nombre en la fuente de su logo, descriptor en mono, frase principal, tres líneas de oferta, "para quién" y botón **"Ir a [dominio] ↗"**. En escritorio la sección se fija y avanza con el scroll (sección 6.4); en móvil son seis tarjetas apiladas enlazadas a su web (artboard `Movil`), en el mismo orden y con el paso en la etiqueta mono ("01 · NOS CONOCEMOS"). Las frases de cada paso del canvas no se muestran: su contenido ya está en la ficha de cada vertical.
 
 Datos de las verticales (se leen de `content/verticals.ts`, nunca escritos en los componentes):
 
@@ -122,9 +124,9 @@ Valira Valley aparece en la portada junto al resto de verticales, con el mismo t
 
 Todo enlace de salida a una vertical lleva `utm_source=level5&utm_medium=grupo&utm_campaign=portada&utm_content=[seccion]` y abre en la misma pestaña. Una vertical con `published: false` en `content/verticals.ts` muestra "Próximamente" en lugar del botón y no enlaza.
 
-**Regla de color.** El manual prohíbe dos acentos de marcas distintas en la misma composición. Por eso la ficha muestra **una sola vertical cada vez**, y el acento aparece solo en la regla superior de la ficha y en el punto de la lista. La sección 4.5 y el pie nombran las seis sin color.
+**Regla de color.** El manual prohíbe dos acentos de marcas distintas en la misma composición. Por eso la ficha muestra **una sola vertical cada vez**, y el acento aparece solo en la regla superior de la ficha y en el punto de la lista. El pie nombra las seis sin color.
 
-**4.5 Cómo encaja (`#circulo`).** Seis pasos en rejilla de reglas: nos conocemos (Valira Valley) → diagnosticamos (Intelligence) → formamos (Academy) → equipamos (Labs) → aceleramos (Foundry) → instalamos (Landing). Cada paso enlaza a su vertical.
+**4.5 Cómo encaja.** Integrada en 4.4 desde la versión 1.3: las dos secciones seguidas repetían el catálogo de marcas. Se suprimen el ancla `#circulo`, el titular "Seis marcas. Entra por la que necesites hoy." y el enlace de la cabecera; las secciones siguientes se renumeran (03 · Por qué Andorra, 04 · Quién está detrás, 05 · Contacto).
 
 **4.6 Por qué Andorra (`#andorra`).** Fotografía a sangre con velo, titular grande y tres razones. Sin cifras fiscales: cualquier dato numérico sobre fiscalidad o residencia queda fuera de esta página y vive en fifth-landing.com, revisado por la gestoría.
 
@@ -136,7 +138,7 @@ Todo enlace de salida a una vertical lleva `utm_source=level5&utm_medium=grupo&u
 
 **4.10 Sociedad en constitución.** A 13 de noviembre de 2026 Level 5, SL **no está registrada**: no hay NRT, domicilio social ni datos registrales. Mientras sea así, el pie dice "Level 5, SL (en constitución) · Principat d'Andorra" y esos datos salen de `settings` (`company_legal`), de modo que al inscribirse la sociedad se completan sin tocar código. El aviso legal y la política de privacidad necesitan un titular y un responsable del tratamiento identificados: **el formulario no se publica** hasta que la gestoría confirme quién figura como responsable mientras la sociedad no esté inscrita (decisión abierta 8).
 
-**Cabecera.** Lockup Level Five, anclas (El grupo · Verticales · Cómo encaja · Andorra · Socios), selector de idioma (ES · CA · FR · EN) y botón "Hablemos". Comportamiento en sección 6.2. Por debajo de 860 px se pliega a botón de menú con panel a pantalla completa, con el selector de idioma dentro.
+**Cabecera.** Lockup Level Five, anclas (El grupo · Verticales · Andorra · Socios), selector de idioma (ES · CA · FR · EN) y botón "Hablemos". Comportamiento en sección 6.2. Por debajo de 860 px se pliega a botón de menú con panel a pantalla completa, con el selector de idioma dentro.
 
 ---
 
@@ -218,7 +220,6 @@ Entre 860 y 1023 px no se fija: lista arriba y ficha debajo, cambia con clic. Po
 - **Entradas**: cada bloque sube 24 px con fundido al entrar en pantalla, una sola vez, con 60 ms de escalonado entre hermanos.
 - **El grupo**: el titular se "enciende" palabra a palabra ligado al scroll (opacidad de 0,25 a 1).
 - **Cambio de fondo**: al pasar de papel a oscuro (Andorra, Contacto) el color de fondo de la página hace transición de 600 ms en lugar de cortar en seco.
-- **Cómo encaja**: los seis pasos entran en orden y una regla se dibuja de izquierda a derecha por encima.
 - **Andorra**: parallax de la fotografía (−8 % a 8 %) y titular con máscara.
 - **Formulario**: transición de foco en los campos; el cambio a confirmación usa la View Transitions API cuando existe y un fundido cuando no.
 - **Cambio de idioma**: fundido de 300 ms del contenido con la View Transitions API cuando existe, conservando la sección en la que estaba el visitante.
@@ -314,7 +315,7 @@ La identidad es la del **Manual de identidad Level Five v1.0**, en el sistema de
 
 | Hito | Contenido | Se cierra cuando |
 | --- | --- | --- |
-| **W1** | Estructura con rutas por idioma, tokens, las nueve secciones estáticas en castellano desde el canvas, imágenes de banco, responsive | La página coincide con los dos artboards y pasa Lighthouse sin movimiento |
+| **W1** | Estructura con rutas por idioma, tokens, las ocho secciones estáticas en castellano desde el canvas, imágenes de banco, responsive | La página coincide con los dos artboards y pasa Lighthouse sin movimiento |
 | **W2** | Movimiento completo (sección 6), formulario y correos de extremo a extremo, legales con huecos, SEO, analítica | Se cumplen los criterios de la sección 10 en castellano |
 | **W3** | Catalán, francés e inglés: página, correos, consentimientos, legales, `hreflang` y selector | Los socios han revisado las tres traducciones y se cumplen todos los criterios de la sección 10: **el sitio puede publicarse** |
 

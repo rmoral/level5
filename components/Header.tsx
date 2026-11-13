@@ -9,7 +9,6 @@ function NavLinks({ t, locale }: { t: Dictionary; locale: Locale }) {
     <div className="nav-links">
       <a href="#grupo">{t.nav.group}</a>
       <a href="#verticales">{t.nav.verticals}</a>
-      <a href="#circulo">{t.nav.circle}</a>
       <a href="#andorra">{t.nav.andorra}</a>
       <a href="#equipo">{t.nav.partners}</a>
       <LangSwitch t={t} locale={locale} />

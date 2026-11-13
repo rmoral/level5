@@ -2,7 +2,7 @@
 
 import { useRef, useState, type CSSProperties, type KeyboardEvent, type ReactNode } from "react";
 
-type Tab = { id: string; index: string; name: string; short: string; style: CSSProperties };
+type Tab = { id: string; step: string; name: string; short: string; style: CSSProperties };
 
 /**
  * Pestañas de verticales (patrón WAI-ARIA, activación automática).
@@ -54,8 +54,8 @@ export function VerticalTabs({ label, tabs, panels }: { label: string; tabs: Tab
             onClick={() => setActive(i)}
             onKeyDown={(e) => onKeyDown(e, i)}
           >
-            <span className="mono-index">{tab.index}</span>
             <span className="v-tab-text">
+              <span className="mono-index">{tab.step}</span>
               <span className="v-tab-name">{tab.name}</span>
               <span className="v-tab-short">{tab.short}</span>
             </span>

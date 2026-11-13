@@ -5,7 +5,6 @@ import { Hero } from "@/components/Hero";
 import { Credentials } from "@/components/Credentials";
 import { Group } from "@/components/Group";
 import { Verticals } from "@/components/Verticals";
-import { Circle } from "@/components/Circle";
 import { Andorra } from "@/components/Andorra";
 import { Partners } from "@/components/Partners";
 import { Contact } from "@/components/Contact";
@@ -25,7 +24,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <Credentials t={t} />
         <Group t={t} />
         <Verticals t={t} locale={locale} />
-        <Circle t={t} locale={locale} />
         <Andorra t={t} />
         <Partners t={t} />
         <Contact t={t} locale={locale} />
