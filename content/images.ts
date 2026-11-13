@@ -17,11 +17,11 @@ export const images: {
   heroMobile: { src: "/img/hero-mobile.jpg", width: 1280, height: 1600 },
   andorra: { src: "/img/andorra.jpg", width: 2400, height: 1350 },
   verticals: {
-    intelligence: null,
+    intelligence: { src: "/img/v-intelligence.jpg", width: 1600, height: 900 },
     foundry: null,
     landing: { src: "/img/v-landing.jpg", width: 1600, height: 900 },
-    academy: null,
+    academy: { src: "/img/v-academy.jpg", width: 1600, height: 900 },
     labs: { src: "/img/v-labs.jpg", width: 1600, height: 900 },
-    valira: null,
+    valira: { src: "/img/v-valira.jpg", width: 1600, height: 900 },
   },
 };

@@ -88,7 +88,7 @@ export const es = {
         who: "Para empresas que quieren resultados medibles, no un informe.",
         cardLabel: "CONSULTORÍA E IA",
         cardLine: "Estrategia que se implanta, una iniciativa a la vez.",
-        photoAlt: "Reunión de trabajo alrededor de una mesa, con luz natural.",
+        photoAlt: "Reunión de trabajo alrededor de una mesa, junto a un ventanal con luz natural.",
       },
       foundry: {
         short: "Aceleradora y venture studio",
@@ -130,7 +130,7 @@ export const es = {
         who: "Para directivos y equipos que aprenden para aplicarlo el lunes.",
         cardLabel: "FORMACIÓN",
         cardLine: "Talleres presenciales y en directo para equipos que crecen.",
-        photoAlt: "Taller con un grupo reducido de personas alrededor de una mesa.",
+        photoAlt: "Grupo reducido trabajando sobre unos planos extendidos en una mesa, visto desde arriba.",
       },
       labs: {
         short: "Aplicaciones que adelantan lo que viene",
@@ -158,7 +158,7 @@ export const es = {
         who: "Para empresarios y directivos residentes, y para quien piensa en serlo.",
         cardLabel: "MEDIA Y COMUNIDAD",
         cardLine: "Pódcast, medio y Valira Club.",
-        photoAlt: "Grabación de un pódcast.",
+        photoAlt: "Dos micrófonos de estudio en primer plano.",
       },
     },
   },
